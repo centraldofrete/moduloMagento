@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Centraldofrete_Shipping>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Centraldofrete_Shipping>
+    </modules>
+</config>

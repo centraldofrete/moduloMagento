@@ -1,0 +1,320 @@
+<?xml version="1.0" ?>
+<config>
+    <sections>
+        <carriers>
+            <groups>
+                <Centraldofrete_Shipping translate="label" module="Centraldofrete_Shipping">
+                    <label>Central do Frete</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Active</label>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Is this method active?</tooltip>
+                        </active>
+                        <active_frontend translate="label">
+                            <label>Show in frontend</label>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Is this method available on frontend?</tooltip>
+                        </active_frontend>
+                        <title translate="label">
+                            <label>Method name</label>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <tooltip>Inform the method name, visible to your customers</tooltip>
+                        </title>
+                        <carrier_username translate="label">
+                            <label>Carrier username</label>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <tooltip>Your username within Central do Frete</tooltip>
+                        </carrier_username>
+                        <carrier_password translate="label">
+                            <label>Carrier token</label>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>password</frontend_type>
+                            <tooltip>Your access token within Central do Frete</tooltip>
+                        </carrier_password>
+                        <min_order_value translate="label">
+                            <label>Minimum order value</label>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <tooltip>Minimum order value to trigger this method</tooltip>
+                        </min_order_value>
+                        <max_order_value translate="label">
+                            <label>Maximum order value</label>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <tooltip>Maximum order value to trigger this method</tooltip>
+                        </max_order_value>
+                        <min_order_weight translate="label">
+                            <label>Minimum order weight</label>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <tooltip>Minimum order weight to trigger this method</tooltip>
+                        </min_order_weight>
+                        <max_order_weight translate="label">
+                            <label>Maximum order weight</label>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <tooltip>Maximum order weight to trigger this method</tooltip>
+                        </max_order_weight>
+                        <weight_unit translate="label">
+                            <label>Weight unit</label>
+                            <sort_order>145</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Centraldofrete_Shipping_Model_Source_Weightunits</source_model>
+                            <tooltip>Define the weight unit for your store</tooltip>
+                        </weight_unit>
+                        <validate_dimensions translate="label">
+                            <label>Validate dimensions</label>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Validate dimensions when getting the quote?</tooltip>
+                        </validate_dimensions>
+                        <dimension_unit translate="label">
+                            <label>Dimension unit</label>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Centraldofrete_Shipping_Model_Source_Dimensionunits</source_model>
+                            <depends>
+                                <validate_dimensions>
+                                    <value>1</value>
+                                </validate_dimensions>
+                            </depends>
+                            <tooltip>Define the dimension unit for your store, which is used on custom product attributes</tooltip>
+                        </dimension_unit>
+                        <standard_length translate="label">
+                            <label>Standard length (cm)</label>
+                            <sort_order>161</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <depends>
+                                <validate_dimensions>
+                                    <value>1</value>
+                                </validate_dimensions>
+                            </depends>
+                            <tooltip>Standard length to be used when product length is not defined, always in centimeters</tooltip>
+                        </standard_length>
+                        <standard_width translate="label">
+                            <label>Standard width (cm)</label>
+                            <sort_order>162</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <depends>
+                                <validate_dimensions>
+                                    <value>1</value>
+                                </validate_dimensions>
+                            </depends>
+                            <tooltip>Standard width to be used when product width is not defined, always in centimeters</tooltip>
+                        </standard_width>
+                        <standard_height translate="label">
+                            <label>Standard height (cm)</label>
+                            <sort_order>163</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <depends>
+                                <validate_dimensions>
+                                    <value>1</value>
+                                </validate_dimensions>
+                            </depends>
+                            <tooltip>Standard height to be used when product height is not defined, always in centimeters</tooltip>
+                        </standard_height>
+                        <attribute_length translate="label">
+                            <label>Length attribute</label>
+                            <sort_order>164</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Centraldofrete_Shipping_Model_Source_Productattributes</source_model>
+                            <depends>
+                                <validate_dimensions>
+                                    <value>1</value>
+                                </validate_dimensions>
+                            </depends>
+                            <tooltip>Choose the attribute to be used to get product length</tooltip>
+                        </attribute_length>
+                        <attribute_width translate="label">
+                            <label>Width attribute</label>
+                            <sort_order>165</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Centraldofrete_Shipping_Model_Source_Productattributes</source_model>
+                            <depends>
+                                <validate_dimensions>
+                                    <value>1</value>
+                                </validate_dimensions>
+                            </depends>
+                            <tooltip>Choose the attribute to be used to get product width</tooltip>
+                        </attribute_width>
+                        <attribute_height translate="label">
+                            <label>Height attribute</label>
+                            <sort_order>166</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Centraldofrete_Shipping_Model_Source_Productattributes</source_model>
+                            <depends>
+                                <validate_dimensions>
+                                    <value>1</value>
+                                </validate_dimensions>
+                            </depends>
+                            <tooltip>Choose the attribute to be used to get product height</tooltip>
+                        </attribute_height>
+                        <show_delivery_days translate="label">
+                            <label>Show days to delivery</label>
+                            <sort_order>180</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Show estimate days to deliver an order?</tooltip>
+                        </show_delivery_days>
+                        <delivery_message translate="label">
+                            <label>Estimate delivery message</label>
+                            <sort_order>181</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <depends>
+                                <show_delivery_days>
+                                    <value>1</value>
+                                </show_delivery_days>
+                            </depends>
+                            <tooltip>The message to be displayed along estimate days. The tag %d will be replaced by the number of days returned by the server</tooltip>
+                        </delivery_message>
+                        <add_delivery_days translate="label">
+                            <label>Add days to delivery</label>
+                            <sort_order>182</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <depends>
+                                <show_delivery_days>
+                                    <value>1</value>
+                                </show_delivery_days>
+                            </depends>
+                            <tooltip>Add extra days to the estimated delivery? 0 means no extra days</tooltip>
+                        </add_delivery_days>
+                        <add_extra_fee translate="label">
+                            <label>Add extra rate to quote</label>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <tooltip>Add extra rate to a quote? 0 means no extra rate</tooltip>
+                        </add_extra_fee>
+                        
+                        <estimate_quote_box translate="label">
+                            <label>Show estimate box on product page</label>
+                            <sort_order>300</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Show a box to get estimates on product page?</tooltip>
+                        </estimate_quote_box>
+                        <load_css translate="label">
+                            <label>Load module CSS</label>
+                            <sort_order>310</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Load module original CSS. If you use your custom CSS, you can disable this and save resources</tooltip>
+                        </load_css>
+                        <load_jquery translate="label">
+                            <label>Load jQuery</label>
+                            <sort_order>320</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>If your theme is already using jQuery, set this to No.</tooltip>
+                        </load_jquery>
+                        <showmethod translate="label">
+                            <label>Show method if not applicable</label>
+                            <sort_order>500</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>Show this method to the customer even if it is not applicable?</tooltip>
+                        </showmethod>
+                        <sort_order translate="label">
+                            <label>Sort order</label>
+                            <sort_order>510</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <tooltip>Inform the order which a method will be shown</tooltip>
+                        </sort_order>
+                    </fields>
+                </Centraldofrete_Shipping>
+            </groups>
+        </carriers>
+    </sections>
+</config>
