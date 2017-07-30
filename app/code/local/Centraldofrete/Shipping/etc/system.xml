@@ -44,7 +44,7 @@
                             <sort_order>40</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+                            <show_in_store>0</show_in_store>
                             <frontend_type>text</frontend_type>
                             <tooltip>Your username within Central do Frete</tooltip>
                         </carrier_username>
@@ -53,10 +53,20 @@
                             <sort_order>50</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
+                            <show_in_store>0</show_in_store>
                             <frontend_type>password</frontend_type>
                             <tooltip>Your access token within Central do Frete</tooltip>
                         </carrier_password>
+                        <environment translate="label">
+                            <label>Environment</label>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Centraldofrete_Shipping_Model_Source_Environments</source_model>
+                            <tooltip>Define the environment to be used</tooltip>
+                        </environment>
                         <min_order_value translate="label">
                             <label>Minimum order value</label>
                             <sort_order>110</sort_order>
@@ -262,7 +272,7 @@
                             <frontend_type>text</frontend_type>
                             <tooltip>Add extra rate to a quote? 0 means no extra rate</tooltip>
                         </add_extra_fee>
-                        
+
                         <estimate_quote_box translate="label">
                             <label>Show estimate box on product page</label>
                             <sort_order>300</sort_order>
