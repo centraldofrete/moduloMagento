@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Centraldofrete_Shipping>
-            <version>1.0.1</version>
+            <version>1.1.0</version>
             <depends>
                 <Mage_Shipping />
             </depends>
@@ -76,7 +76,8 @@
                 <title>Central do Frete</title>
                 <environment>test</environment>
                 <production_server_url><![CDATA[http://api.centraldofrete.com/]]></production_server_url>
-                <test_server_url><![CDATA[http://dev.api.centraldofrete.com/]]></test_server_url>
+                <test_server_url><![CDATA[http://api.centraldofrete.com/]]></test_server_url>
+                <freight_type>1</freight_type>
                 <!-- custom quote value and weight, set by store manager -->
                 <min_order_value>0</min_order_value>
                 <max_order_value>10000</max_order_value>
